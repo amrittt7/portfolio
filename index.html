@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+  body { background: url("https://images3.alphacoders.com/137/thumb-1920-1377819.png"); color: white; padding: 2rem max(5vw, 2rem); }
+  a { color: inherit; text-decoration: none; }
+
+  
+  .flex-row { display: flex; flex-direction: row; }
+  .flex-col { display: flex; flex-direction: column; }
+  
+  .justify-between { justify-content: space-between; }
+  .align-center { align-items: center; }
+  
+  .wrap { flex-wrap: wrap; }
+  .flex-1 { flex: 1; } 
+
+  
+  .gap-sm { gap: 1rem; }
+  .gap-md { gap: 2rem; }
+  .gap-lg { gap: 4rem; }
+  .gap-xl { gap: 6rem; }
+
+  
+  .border-y { border-top: 1px solid gray; border-bottom: 1px solid gray; }
+  .border-t { border-top: 1px solid gray; }
+  .padding-y { padding: 1.5rem 0; }
+  .padding-t { padding-top: 1.5rem; }
+
+  
+  header { padding-bottom: 2rem; margin-bottom: 2rem; }
+  
+  .hero-image img { width: 250px; height: 250px; border-radius: 10%; object-fit: cover; }
+  
+  .card { 
+    border: 1px solid gray; 
+    padding: 2rem; 
+    border-radius: 8px; 
+    background: black;
+  }
+  
+  .track-box {
+    border: 1px solid gray;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: black;
+    text-align: center;
+  }
+  
+  .min-w-half { min-width: calc(50% - 1rem); } 
+
+  
+  @media (max-width: 768px) {
+    .wrap-mobile { flex-direction: column; }
+    .hero-image img { width: 100%; max-width: 300px; }
+    header nav { display: none; } 
+    .min-w-half { min-width: 100%; }
+  }
+</style>
+</head>
+<body>
+    
+<header class="flex-row justify-between align-center">
+  <a href="#" class="logo">Amrit Sharma </a>
+  <nav class="flex-row gap-md">
+    <a href="#">Learning</a>
+    <a href="#">Blog</a>
+    <a href="#">Books</a>
+    <a href="#">Projects</a>
+    <a href="#">About</a>
+  </nav>
+</header>
+
+<main class="flex-col gap-xl">
+  
+  <section class="flex-row justify-between align-center wrap-mobile gap-lg">
+    <div class="flex-col gap-sm hero-text">
+      <div class="flex-row gap-sm text-muted">
+        <span>Student at SST</span>
+        <span>Bengaluru, India</span>
+      </div>
+      <h1>Hi, I'm Amrit.</h1>
+      <p>I'm currently pursuing my studies at SST.</p>
+      <div class="flex-row gap-sm wrap-mobile">
+        <button>Read my notes</button>
+        <button>Explore projects</button>
+      </div>
+    </div>
+    <div class="my-image">
+      <img src="profile.png" alt="Profile">
+    </div>
+  </section>
+
+  
+  <div class="flex-row gap-md border-y padding-y">
+    <a href="#">GitHub</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Twitter / X</a>
+    <a href="#">RSS</a>
+  </div>
+
+  
+  <section class="flex-row gap-lg wrap-mobile">
+    <article class="flex-col gap-sm card flex-1">
+      <h2>Recent Projects</h2>
+      <p>Ideas, experiments, and engineering lessons.</p>
+      <a href="#"> All archive &rarr;;</a>
+    </article>
+    <article class="flex-col gap-sm card flex-1">
+      <h2>Recent learning</h2>
+      <p>Notes from my Research through internet.</p>
+      <a href="#">Knowledge map &rarr;</a>
+    </article>
+  </section>
+
+  
+  <section class="flex-col gap-md">
+    <div>
+      <h2>Learn where you are! </h2>
+      <p>Explore the coding </p>
+    </div>
+    
+    <div class="flex-row gap-sm wrap">
+      <a href="#" class="track-box flex-1 min-w-half">Data Structures & Algorithms</a>
+      <a href="#" class="track-box flex-1 min-w-half">High-level System Design</a>
+      <a href="#" class="track-box flex-1 min-w-half">Low-level Design</a>
+      <a href="#" class="track-box flex-1 min-w-half">Computer Science Fundamentals</a>
+    </div>
+  </section>
+</main>
+
+
+<footer class="flex-col gap-lg">
+  <div class="flex-row justify-between wrap gap-lg top-footer">
+    <div class="flex-col gap-sm">
+      <p>Writings and Learnings</p>
+
+    </div>
+    <div class="flex-col gap-sm">
+      <p>About</p>
+      
+    </div>
+    <div class="flex-col gap-sm">
+      <p>Learning tracks</p>
+      
+    </div>
+  </div>
+  
+  <div class="flex-row justify-between align-center wrap bottom-footer border-t padding-t">
+    <p>© 2026 Amrit Sharma.</p>
+    <div class="flex-row gap-sm">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
